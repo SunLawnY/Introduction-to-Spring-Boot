@@ -11,6 +11,7 @@ public class DemospringbootappApplication {
 
 	public static void main(String[] args) throws URISyntaxException, IOException, InterruptedException {
 		SpringApplication.run(DemospringbootappApplication.class, args);
+//		GetSun.getSunReport(53.95763, -1.08271);
 	}
 
 }

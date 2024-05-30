@@ -1,8 +1,10 @@
 package com.northcoders.demospringbootapp.controller;
 
 import com.northcoders.demospringbootapp.GetHttp;
+import com.northcoders.demospringbootapp.GetSun;
 import com.northcoders.demospringbootapp.model.CountrySearch;
 import com.northcoders.demospringbootapp.model.Person;
+import com.northcoders.demospringbootapp.model.SunRiseSunSetTime;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
@@ -32,5 +34,15 @@ public class DemoController {
     public List<CountrySearch> getCountry(@RequestParam String city)throws URISyntaxException, IOException, InterruptedException {
 
         return GetHttp.getRequest(city);
+    }
+
+    @GetMapping("/sunRiseSunSet")
+    public SunRiseSunSetTime getSunriseSunset(@RequestParam String city)throws URISyntaxException, IOException, InterruptedException {
+
+        List<CountrySearch> country = GetHttp.getRequest(city);
+        double latitude = country.get(0).lat();
+        double longitude = country.get(0).lgn();
+        System.out.println(latitude);
+        return GetSun.getSunReport(latitude, longitude);
     }
 }
