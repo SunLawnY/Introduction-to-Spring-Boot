@@ -7,10 +7,6 @@ public class Person {
     String placeOfBirth;
     String favouriteFood;
 
-    public String getName() {
-        return name;
-    }
-
     public Person(String name, int age, String email, String placeOfBirth, String favouriteFood) {
         this.name = name;
         this.age = age;
@@ -18,4 +14,25 @@ public class Person {
         this.placeOfBirth = placeOfBirth;
         this.favouriteFood = favouriteFood;
     }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getPlaceOfBirth() {
+        return placeOfBirth;
+    }
+
+    public String getFavouriteFood() {
+        return favouriteFood;
+    }
+
+    public String getName() {
+        return name;
+    }
+
 }

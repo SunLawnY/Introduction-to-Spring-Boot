@@ -19,19 +19,12 @@ public class DemoController {
     }
 
     @GetMapping("/people")
-    public List<String> getPeople() {
-        List<Person> people = List.of(
+    public List<Person> getPeople() {
+        return List.of(
                 new Person("Bob", 30, "bob@bob.com", "London", "Pasta"),
                 new Person("Luke", 24, "luke@bob.com", "Glasgow", "Pizza"),
                 new Person("Elle", 75, "l@bob.com", "Manchester", "Ice cream")
                 );
-
-        List<String> names = new ArrayList<>();
-        for (Person p : people){
-            names.add(p.getName());
-        }
-
-        return names;
 
     }
 
