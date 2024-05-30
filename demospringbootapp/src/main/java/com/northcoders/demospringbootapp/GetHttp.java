@@ -25,7 +25,6 @@ public class GetHttp {
 
         ObjectMapper mapper = new ObjectMapper();
         ResultList result =  mapper.readValue(response.body(), ResultList.class);
-        System.out.println(Arrays.asList(result.results()).get(0).lat());
         return Arrays.asList(result.results());
     }
 }
