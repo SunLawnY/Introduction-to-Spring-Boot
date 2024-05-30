@@ -4,6 +4,7 @@ import com.northcoders.demospringbootapp.GetHttp;
 import com.northcoders.demospringbootapp.GetSun;
 import com.northcoders.demospringbootapp.model.CountrySearch;
 import com.northcoders.demospringbootapp.model.Person;
+import com.northcoders.demospringbootapp.model.RiseSetList;
 import com.northcoders.demospringbootapp.model.SunRiseSunSetTime;
 import org.springframework.web.bind.annotation.*;
 
@@ -42,7 +43,6 @@ public class DemoController {
         List<CountrySearch> country = GetHttp.getRequest(city);
         double latitude = country.get(0).lat();
         double longitude = country.get(0).lgn();
-        System.out.println(latitude);
         return GetSun.getSunReport(latitude, longitude).results();
     }
 }

@@ -21,7 +21,6 @@ public class GetSun {
 
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         ObjectMapper mapper = new ObjectMapper();
-        System.out.println(response.body());
         RiseSetList result = mapper.readValue(response.body(), RiseSetList.class);
         System.out.println(result);
         return result;
