@@ -1,24 +1,14 @@
 package com.northcoders.demospringbootapp.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record CountrySearch(String name,
-                            double latitude,
-                            double longitude) {
-
-    @Override
-    public String name() {
-        return name;
-    }
-
-    @Override
-    public double latitude() {
-        return latitude;
-    }
-
-    @Override
-    public double longitude() {
-        return longitude;
-    }
+public record CountrySearch(
+        @JsonProperty("name")
+        String name,
+        @JsonProperty("latitude")
+        double lat,
+        @JsonProperty("longitude")
+        double lgn) {
 }

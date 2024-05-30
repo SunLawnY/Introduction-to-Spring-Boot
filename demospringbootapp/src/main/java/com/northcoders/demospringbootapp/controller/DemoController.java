@@ -30,6 +30,7 @@ public class DemoController {
 
     @GetMapping("/location")
     public List<CountrySearch> getCountry(@RequestParam String city)throws URISyntaxException, IOException, InterruptedException {
+
         return GetHttp.getRequest(city);
     }
 }
