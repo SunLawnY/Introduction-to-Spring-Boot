@@ -17,7 +17,7 @@ public class GetHttp {
     public static List<CountrySearch> getRequest(String countryName) throws URISyntaxException, IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(new URI("https://geocoding-api.open-meteo.com/v1/search?name=" + countryName))
+                .uri(new URI("https://geocoding-api.open-meteo.com/v1/search?count=1&name=" + countryName))
                 .GET()
                 .build();
 
