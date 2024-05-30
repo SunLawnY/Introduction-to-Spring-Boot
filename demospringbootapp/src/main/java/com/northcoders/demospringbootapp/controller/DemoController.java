@@ -43,6 +43,6 @@ public class DemoController {
         double latitude = country.get(0).lat();
         double longitude = country.get(0).lgn();
         System.out.println(latitude);
-        return GetSun.getSunReport(latitude, longitude);
+        return GetSun.getSunReport(latitude, longitude).results();
     }
 }
