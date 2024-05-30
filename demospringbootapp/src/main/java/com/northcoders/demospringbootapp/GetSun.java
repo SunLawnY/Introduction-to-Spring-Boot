@@ -2,8 +2,6 @@ package com.northcoders.demospringbootapp;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.northcoders.demospringbootapp.model.RiseSetList;
-import com.northcoders.demospringbootapp.model.SunRiseSunSetTime;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
