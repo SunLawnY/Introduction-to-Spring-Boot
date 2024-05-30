@@ -1,11 +1,11 @@
 package com.northcoders.demospringbootapp.model;
 
 public class Person {
-    String name;
-    int age;
-    String email;
-    String placeOfBirth;
-    String favouriteFood;
+    private String name;
+    private int age;
+    private String email;
+    private String placeOfBirth;
+    private String favouriteFood;
 
     public Person(String name, int age, String email, String placeOfBirth, String favouriteFood) {
         this.name = name;

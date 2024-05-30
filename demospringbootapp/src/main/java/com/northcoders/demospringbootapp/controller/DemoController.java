@@ -25,7 +25,6 @@ public class DemoController {
                 new Person("Luke", 24, "luke@bob.com", "Glasgow", "Pizza"),
                 new Person("Elle", 75, "l@bob.com", "Manchester", "Ice cream")
                 );
-
     }
 
 }
